@@ -1,6 +1,6 @@
 import pandas as pd
 
-ecom = pd.read_csv("/home/gabriel-note/Documentos/mycodes/LAMIA/Material de aulas/Python-Data-Science-and-Machine-Learning-Bootcamp/2. Python para análise de dados/Pandas/Pandas Exercises/Ecommerce Purchases")
+ecom = pd.read_csv("pandas_exercises/files/Ecommerce Purchases")
 
 ecom.head() # 5 primeiras linhas do DataFrame
 

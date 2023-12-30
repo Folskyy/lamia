@@ -1,7 +1,6 @@
 import pandas as pd
 
-sal = pd.read_csv('/home/gabriel-note/Documentos/mycodes/LAMIA/Material de aulas/Python-Data-Science-and-Machine-Learning-Bootcamp/2. Python para análise de dados/Pandas/Pandas Exercises/Salaries.csv')
-
+sal = pd.read_csv('pandas_exercises/files/Salaries.csv')
 
 sal.head()
 
