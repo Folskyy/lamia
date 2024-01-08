@@ -1,3 +1,5 @@
+"""Resolução dos exercícios"""
+
 import pandas as pd
 
 ecom = pd.read_csv("pandas_exercises/files/Ecommerce Purchases")

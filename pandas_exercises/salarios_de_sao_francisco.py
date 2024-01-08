@@ -1,3 +1,5 @@
+"""Resolução dos exercícios²"""
+
 import pandas as pd
 
 sal = pd.read_csv('pandas_exercises/files/Salaries.csv')
