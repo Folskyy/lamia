@@ -16,9 +16,9 @@ def ranquear_palavras(arquivo):
 
     return palavras_ranqueadas
 
-arquivo = 'job_logs.md'
+arquivo = 'output/job_logs.md'
 resultado = ranquear_palavras(arquivo)
 
-with open('rank_words.md', 'w') as f:
+with open('output/rank_words.md', 'w') as f:
     for palavra, contagem in resultado:
         f.write(f"# {palavra}: # *{contagem} vezes.*\n")

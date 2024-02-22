@@ -18,7 +18,7 @@ else
 fi
 
 echo -e "${BLUE}Vagas lidas: ${NC}"
-cat 'job_logs.md'
+cat 'output/job_logs.md'
 
 echo -e "${BLUE}Ranqueando as palavras extraídas...${NC}"
 
@@ -33,4 +33,4 @@ fi
 
 echo -e "${BLUE}RANKING: ${NC}"
 
-cat 'rank_words.md'
+cat 'output/rank_words.md'

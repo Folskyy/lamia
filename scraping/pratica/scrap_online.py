@@ -16,7 +16,7 @@ unfamiliar_skill = input('Put some skill that youre not familiar with\n> ')
 print(f"Filtering out {unfamiliar_skill}")
 
 # abre um arquivo md para salvar as vagas encontradas
-with open ('job_logs.md', 'w') as file:
+with open ('output/job_logs.md', 'w') as file:
     count = 1
     for job in jobs: # itera sobre todos os cards de cada vaga atribuida a variavel jobs
         # atribui cada uma das informações desejadas da vaga a uma variavel
