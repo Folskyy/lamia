@@ -67,7 +67,7 @@ matriz
 peso0 = np.array(classificador.layers[0].get_weights())
 peso1 = np.array(classificador.layers[1].get_weights())
 
-print(f"Número de acertos: {(previsoes == classe_teste).sum()}")
-print(f"Número de erros: {previsoes.size - (previsoes == classe_teste).sum()}")
+with open('/content/output/classificador_breast.json', 'w') as f: # salva a estrutura da rede
+    f.write(classificador.to_json())
 
-peso0
+classificador.save_weights('/content/output/classificador_breast.h5') # salva os pesos dos neuronios
