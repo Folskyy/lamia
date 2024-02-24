@@ -36,7 +36,7 @@ new_input = np.array([
 res = classificador.predict(new_input)
 print(res > 0.5)
 
-with open('output/classificador_breast.json', 'w') as f: # salva a estrutura da rede
+with open('/home/gabriel/Documentos/lamia/deep_learning/binary_classification/output/classificador_breast.json', 'w') as f: # salva a estrutura da rede
     f.write(classificador.to_json())
 
-classificador.save_weights('output/classificador_breast.h5')
+classificador.save_weights('/home/gabriel/Documentos/lamia/deep_learning/binary_classification/output/classificador_breast.h5')
