@@ -27,7 +27,7 @@ classificador = Sequential()
 
 classificador.add(Dense(units=4, activation='relu', input_dim=4))
 classificador.add(Dense(units=4, activation='relu'))
-classificador.add(Dense(units=3, activation='softmax')) # função ideal para multicamadas
+classificador.add(Dense(units=3, activation='softmax')) # função ideal para classificações multiplas
 
 classificador.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['categorical_accuracy'])
 classificador.fit(previsores_treinamento, classe_treinamento, batch_size=10, epochs=1000)
