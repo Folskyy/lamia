@@ -31,7 +31,7 @@ plt.ylabel('Probabilidade')
 
 plt.legend(['Normal', 'x(média=1 e var=0.5)', 'x(média e variância da array)'])
 
-# plt.savefig('/home/gabriel-note/Documentos/UTFPR/LAMIA/aulas/Statistics and Probabillity - Python/python/distros_gauss')
+plt.savefig('output/distros_gauss.png')
 
 plt.show()
 
