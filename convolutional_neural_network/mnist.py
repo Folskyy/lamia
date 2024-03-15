@@ -50,26 +50,6 @@ classificador.add(Dense(units=128, activation='relu'))
 classificador.add(Dense(units=10, activation='softmax'))
 classificador.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 classificador.fit(previsores_treinamento, classe_treinamento, batch_size=128, epochs=5, validation_data=(previsores_teste, classe_teste))
-pi
+
 #%%
 resultado = classificador.evaluate(previsores_teste, classe_teste)
-
-#%%
-from PIL import Image
-import numpy as np
-
-def to_nparray(image_path):
-    image = Image.open(image_path)
-    
-    # image = image.resize(target_size)
-    
-    image_array = np.array(image)
-    
-    return image_array
-
-path = 'Documentos/lamia/convolutional_neural_network/input/nove.png'
-
-png_input = to_nparray(path)
-
-
-classificador.summary()
