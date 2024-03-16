@@ -24,6 +24,7 @@ with open('scraping/test.html', 'r') as html_file:
 
     brand = []
     price = []
+    
     for course in course_cards: # separando todas as tags div com o class="card" em duas listas
         brand.append(course.p.text.split()[1])
         price.append(course.span.text)
