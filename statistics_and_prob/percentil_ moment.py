@@ -15,7 +15,7 @@ np.percentile(vals, 90)
 np.percentile(vals, 20)
 np.percentile(vals, 10) 
 
-#moments
+# moments
 np.mean(vals) # média
 np.var(vals) # variância
 sp.skew(vals) # assimetria
