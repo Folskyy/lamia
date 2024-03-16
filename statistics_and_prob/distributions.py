@@ -23,7 +23,7 @@ plt.ylim([0, 1.0])
 
 plt.show()
 
-plt.xkcd()
+plt.xkcd() # LOL
 
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)
