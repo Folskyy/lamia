@@ -33,8 +33,8 @@ r_value ** 2
 def predict(x): # função da reta
     return slope * x + intercept # y = ax + b
 
-fitLine = predict(pageSpeeds)
+fitLine = predict(pageSpeeds) # atribuição da reta usando o pageseeds como argumento para a função predict
 
-plt.scatter(pageSpeeds, purchaseAmount)
-plt.plot(pageSpeeds, fitLine, c='r')
+plt.scatter(pageSpeeds, purchaseAmount) # plot do gráfico
+plt.plot(pageSpeeds, fitLine, c='r') # adicionando a reta ao gráfico
 plt.show()
