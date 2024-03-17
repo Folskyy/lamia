@@ -8,6 +8,7 @@ plt.figure(1) # simples gráfico de uma distribuição gaussiana balanceada(assi
 
 plt.plot(x, norm.pdf(x))
 plt.title('distribuição gaussiana balanceada (Assimetria = 0)')
+plt.savefig('output/distros_gauss.png')
 plt.show()
 
 plt.figure(2) # múltuiplas funções em uma única figura
@@ -31,8 +32,7 @@ plt.ylabel('Probabilidade')
 
 plt.legend(['Normal', 'x(média=1 e var=0.5)', 'x(média e variância da array)'])
 
-# plt.savefig('/home/gabriel-note/Documentos/UTFPR/LAMIA/aulas/Statistics and Probabillity - Python/python/distros_gauss')
-
+plt.savefig('output/multi_func.png')
 plt.show()
 
 plt.figure(3)# gráfico de pizza
@@ -44,7 +44,7 @@ labels = ['O xote das Meninas', 'Numa sala de Reboco', 'Pagode Russo', 'A vida d
 plt.pie(values, colors=colors, labels=labels, explode=explode)
 plt.title('Músicas mais ouvidas do liuz gonzaga recentemente no spotify')
 
-# plt.bar(range(0,5), values, color= colors)
+plt.savefig('output/pie_graph.png')
 plt.show()
 
 plt.figure(4) # gráfico de barras
@@ -53,16 +53,19 @@ labels = ['TOKYO', 'NOVA DELHI', 'XANGAI', 'DHAKA', 'SÃO PAULO']
 
 plt.bar(labels, values, color= colors)
 plt.title('Cidades mais povoadas do mundo')
+plt.savefig('output/bar_graph.png')
 plt.show()
 
 plt.figure(5) # gráfico de dispersão
 plt.scatter(np.random.randn(100), np.random.rand(100))
+plt.savefig('output/dispersion_graph.png')
 plt.show()
 
 plt.figure(6) # histograma
 incomes = np.random.normal(27000, 15000, 10000)
 plt.hist(incomes, 50)
-plt.show() # as barras representam o numero de dados que estão nesse intervalo
+plt.savefig('output/histogram.png')
+plt.show() # as barras representam o número de dados que estão nesse intervalo
 
 plt.figure(7) # quartil
 uniformSkewed = np.random.rand(100) * 100 - 40
@@ -70,4 +73,5 @@ high_outliers = np.random.rand(10) * 50 + 100
 low_outliers = np.random.rand(10) * -50 - 100
 data = np.concatenate((uniformSkewed, high_outliers, low_outliers)) # tenho que ver essa função
 plt.boxplot(data)
+plt.savefig('output/quartil.png')
 plt.show()
