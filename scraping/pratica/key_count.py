@@ -6,6 +6,7 @@ def contar_palavras(arquivo):
     with open(arquivo, 'r') as f:
         conteudo = f.read()
         palavras = re.findall(r'\b\w+\b', conteudo)
+        
         return palavras
 
 def ranquear_palavras(arquivo):
