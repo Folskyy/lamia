@@ -9,7 +9,7 @@ r_cols = ['user_id', 'movie_id', 'rating']
 ratings = pd.read_csv("/home/gabriel/Documentos/UTFPR/lamia-material/MLCourse/ml-100k/u.data",
                        sep = '\t', names = r_cols, usecols=[0, 1, 2])
 
-# Agrupamento pelo id do filme
+# agrupamento pelo id do filme
 movies = ratings.groupby('movie_id').agg({'rating': ['size', 'mean']})
 
 movie_num_ratings = pd.DataFrame(movies['rating']['size'])
