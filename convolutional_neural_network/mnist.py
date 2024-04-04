@@ -41,7 +41,7 @@ classe_treinamento = np_utils.to_categorical(y_treinamento, 10)
 classe_teste = np_utils.to_categorical(y_teste, 10)
 
 classificador = Sequential()
-0classificador.add(Conv2D(filters=64, kernel_size=(3, 3), input_shape=(28, 28, 1), activation='relu'))
+classificador.add(Conv2D(filters=64, kernel_size=(3, 3), input_shape=(28, 28, 1), activation='relu'))
 classificador.add(MaxPooling2D(pool_size=(2,2)))
 classificador.add(Flatten())
 
