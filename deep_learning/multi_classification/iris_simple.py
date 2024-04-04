@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-base = pd.read_csv('/home/gabriel/Documentos/lamia/deep_learning/multi_classification/iris.csv')
+base = pd.read_csv('iris.csv')
 
 # o iloc é conveniente para usar indices inteiros (não indices rotulados)
 previsores = base.iloc[:, 0:4].values
