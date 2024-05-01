@@ -24,6 +24,7 @@ x_vals = []
 y_vals = []
 z_vals = []
 
+# armazenar todos os pontos de x, y e z
 for i in range(a.shape[0]):
     for j in range(a.shape[1]):
         for k in range(a.shape[2]):
@@ -50,7 +51,7 @@ layout = go.Layout(
 fig = go.Figure(data=[trace], layout=layout)
 
 #%%
-pyo.plot(fig, filename='tensor.html')
+pyo.plot(fig, filename='tensor3d.html')
 
 #%%
 #2-D
@@ -83,7 +84,7 @@ layout = go.Layout(
 fig = go.Figure(data=[trace], layout=layout)
 
 #%%
-pyo.plot(fig, filename='tensor.html')
+pyo.plot(fig, filename='tensor2d.html')
 
 ########################OPERATIONS########################
 #%%
