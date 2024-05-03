@@ -1,31 +1,14 @@
 #%%
 import torch
 import torch.nn as nn
-from torchvision import datasets
+from torchvision.datasets import FashionMNIST
 import matplotlib.pyplot as plt
 import numpy as np
 from torch.utils.data import Dataset, DataLoader
 
-#%%
-data_folder = '/fmnist/'
-fmnist = datasets.FashionMNIST(data_folder, download=True, train=True)
-
 # %%
-tr_images = fmnist.data
-tr_targets = fmnist.targets
-
-#%%
-# plotar 100 imagens aleatórias do conjunto de dados fmnist
-R, C = len(tr_targets.unique()), 10
-fig, ax = plt.subplots(R, C, figsize=(10,10))
-for label_class, plot_row in enumerate(ax):    
-    label_x_rows = np.where(tr_targets == label_class)[0]
-    for plot_cell in plot_row:
-        plot_cell.grid(False); plot_cell.axis('off')
-        ix = np.random.choice(label_x_rows)
-        x, y = tr_images[ix], tr_targets[ix]
-        plot_cell.imshow(x, cmap='gray')
-plt.tight_layout()
+tr_images = FashionMNIST('',train=True, download=False).data
+tr_targets = FashionMNIST('',train=True, download=False).targets
 
 # %%
 class FMNISTDataset(Dataset):
@@ -137,4 +120,7 @@ plt.legend()
 
 #%%
 # visualização de um tensor de saída (previão)
-model(fmnist.data[0].float().view(-1, 28*28))
+num = 19
+print(model(FashionMNIST('', download=False, train=False).data[num].float().view(-1, 28*28)))
+print(FashionMNIST('', download=False, train=False).targets[num])
+# %%
