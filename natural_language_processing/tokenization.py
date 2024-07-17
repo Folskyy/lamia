@@ -30,13 +30,14 @@ for i, sentence in enumerate(sequences):
                 
     [print(word, end=' ') for word in sentence]
 
+# Recebe o tamanho da sentença mais longa.
+max_len = [len(sent) for sent in sequences]
+max_len = max(max_len)
 #%%
 print("Word : Index")
 [print(f"{word} : {word_index[word]}") for word in word_index]
 
 # %%
-# Recebe a palavra mais longa. Exceto o oov_token 
-max_len = max([len(word) for i, word in enumerate(word_index) if i != 0])
 # padding ajusta para que as sentenças possuam o mesmo tamanho
 # para isso, comumente é adicionado zeros à esquerda da sentença
 padded = pad_sequences(sequences, maxlen=max_len)
